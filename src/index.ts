@@ -50,7 +50,7 @@ const vectorStore = await MemoryVectorStore.fromDocuments(
 // You can now perform similarity search like this:
 const results = await vectorStore.similaritySearch(query, 3);
 
-   const customPrompt = `Based on the following prompt explain the quesiton if question doesn't belong to the prompt write out of the pdf giving answer from my internet sources now question is ${query}`;
+   const customPrompt = `Based on the following prompt explain the question if question doesn't belong to the prompt respond with question doesnot belong to pdf if belong give answer only  no next line anything and only give answer in a professional and easy language related to prompt   Question is ${query}`;
 
   const response = await ai.models.generateContent({
   model: "gemini-2.0-flash",
