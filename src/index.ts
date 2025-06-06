@@ -66,7 +66,7 @@ const results = await vectorStore.similaritySearch(query, 3);
   ],
 });
 console.log(response.text)
-return  response.text;
+return  JSON.stringify(response);
 
 }
 
